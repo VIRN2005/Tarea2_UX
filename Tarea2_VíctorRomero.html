@@ -94,8 +94,8 @@
                             sin límites y la tecnología sea accesible para todos. Trabajamos incansablemente para
                             transformar cada interacción en una aventura inolvidable, fusionando la innovación con la
                             accesibilidad y creando así un futuro más conectado e inspirador para todos."</p>
-                        <a href="#"
-                            class="btn btn-orange text-white d-flex justify-content-center align-items-center">Acción <i
+                        <a href="#contacto"
+                            class="btn btn-orange text-white d-flex justify-content-center align-items-center">CONTACT US<i
                                 class="fas fa-hand-pointer"></i></a>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
                             esforzamos por alcanzar la excelencia en todo lo que hacemos, desde el desarrollo de
                             productos hasta la atención al cliente, buscando siempre superar las expectativas.</p>
                         <a href="#"
-                            class="btn btn-orange text-white d-flex justify-content-center align-items-center">Acción <i
+                            class="btn btn-orange text-white d-flex justify-content-center align-items-center">REGRESA AL INICIO<i
                                 class="fas fa-hand-pointer"></i></a>
                     </div>
                 </div>
@@ -131,8 +131,8 @@
                             mundo donde la imaginación florezca sin límites. Buscamos transformar cada interacción en
                             una aventura inolvidable, potenciando el aprendizaje, fomentando la creatividad y
                             fortaleciendo los lazos humanos a través de experiencias inmersivas y emocionantes."</p>
-                        <a href="#"
-                            class="btn btn-orange text-white d-flex justify-content-center align-items-center">Acción <i
+                        <a href="#contacto"
+                            class="btn btn-orange text-white d-flex justify-content-center align-items-center">CONTACT US<i
                                 class="fas fa-hand-pointer"></i></a>
                     </div>
                 </div>
@@ -188,25 +188,51 @@
         </button>
     </nav>
 
-    <section id="contacto" class="container mt-5">
-        <h2 class="text-center mb-4">CONTACTO</h2>
-        <div class="row justify-content-center">
-            <div class="col-md-6">
-                <form>
-                    <div class="mb-3">
-                        <label for="nombre" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre...">
-                    </div>
-                    <div class="mb-3">
-                        <label for="correo" class="form-label">Correo electrónico</label>
-                        <input type="email" class="form-control" id="correo"
-                            placeholder="Ingrese su correo electrónico...">
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Enviar</button>
-                </form>
+    <div class="container">
+        <section id="contacto" class="container mt-5 rounded-box">
+            <h2 class="text-center mb-4">CONTACTO</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label font-trueno">Nombre</label>
+                            <input type="text" class="form-control" id="nombre"
+                                placeholder="Ingrese su nombre...">
+                        </div>
+                        <div class="mb-3">
+                            <label for="correo" class="form-label font-trueno">Correo electrónico</label>
+                            <input type="email" class="form-control" id="correo"
+                                placeholder="Ingrese su correo electrónico...">
+                        </div>
+                        <button type="submit" class="btn btn-orange btn-primary btn-block">Enviar</button>
+                    </form>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var nombreInput = document.getElementById('nombre');
+            var correoInput = document.getElementById('correo');
+    
+            document.querySelector('form').addEventListener('submit', function(event) {
+                event.preventDefault();
+    
+                var nombre = nombreInput.value;
+                var correo = correoInput.value;
+    
+                localStorage.setItem('nombre', nombre);
+                localStorage.setItem('correo', correo);
+    
+                nombreInput.value = '';
+                correoInput.value = '';
+    
+                alert('¡Los datos se han guardado correctamente!');
+            });
+        });
+    </script>
+    
 
     <footer class="bg-dark text-white text-center py-4 mt-5">
         <p>&copy; 2024 VR Technologies. </p>
