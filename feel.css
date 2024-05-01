@@ -57,11 +57,15 @@ div a1{
 }
 
 /* MARQUEE FOR MOVEMENTS */
-.marquee {
-    margin: 0 -107%;
-    white-space: nowrap;
+.marquee-container {
     overflow: hidden;
-    position: absolute;
+    white-space: nowrap;
+    position: relative;
+}
+
+.marquee {
+    margin: 0;
+    padding: 10px 0; /* Ajusta el padding según sea necesario */
 }
 
 .marquee span {
@@ -70,6 +74,10 @@ div a1{
     display: inline-block;
     padding-left: 100%;
     animation: marquee 20s linear infinite;
+}
+
+.marquee2{
+    margin-top: -57px;
 }
 
 .marquee2 span {
@@ -128,9 +136,20 @@ header {
     color: #ffffff;
     text-align: center;
 }
+
 header h1 {
     font-family: 'trueno';
     font-size: 100px;
+}
+
+section h2 {
+    font-family: 'trueno';
+    font-size: 40px;
+}
+
+div h6 {
+    font-family: 'rushk';
+    font-size: 110px;
 }
 
 /* FOOTER STUFF */ 
